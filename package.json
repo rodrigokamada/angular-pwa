@@ -1,6 +1,8 @@
 {
   "name": "angular-pwa",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Application example built with Angular 13 and adding the Progressive Web Application (PWA) using the @angular/pwa library.",
+  "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,30 +12,30 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~13.1.0",
-    "@angular/common": "~13.1.0",
-    "@angular/compiler": "~13.1.0",
-    "@angular/core": "~13.1.0",
-    "@angular/forms": "~13.1.0",
-    "@angular/platform-browser": "~13.1.0",
-    "@angular/platform-browser-dynamic": "~13.1.0",
-    "@angular/router": "~13.1.0",
+    "@angular/animations": "~13.1.1",
+    "@angular/common": "~13.1.1",
+    "@angular/compiler": "~13.1.1",
+    "@angular/core": "~13.1.1",
+    "@angular/forms": "~13.1.1",
+    "@angular/platform-browser": "~13.1.1",
+    "@angular/platform-browser-dynamic": "~13.1.1",
+    "@angular/router": "~13.1.1",
     "rxjs": "~7.4.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.2",
     "@angular/cli": "~13.1.2",
-    "@angular/compiler-cli": "~13.1.0",
-    "@types/jasmine": "~3.10.0",
-    "@types/node": "^12.11.1",
-    "jasmine-core": "~3.10.0",
-    "karma": "~6.3.0",
+    "@angular/compiler-cli": "~13.1.1",
+    "@types/jasmine": "~3.10.2",
+    "@types/node": "^14.18.2",
+    "jasmine-core": "~3.10.1",
+    "karma": "~6.3.9",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
-    "karma-jasmine": "~4.0.0",
+    "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.4"
   }
 }
