@@ -1,27 +1,90 @@
-# AngularPwa
+# Angular Progressive Web Application (PWA)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-## Development server
+Application example built with [Angular](https://angular.io/) 13 and adding the Progressive Web Application (PWA) using the [@angular/pwa library](https://www.npmjs.com/package/@angular/pwa).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This tutorial was posted on my [blog]() in portuguese and on the [DEV Community]() in english.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+[![Website](https://shields.braskam.com/v1/shields?name=website&format=rectangle&size=small&radius=5)](https://rodrigo.kamada.com.br)
+[![LinkedIn](https://shields.braskam.com/v1/shields?name=linkedin&format=rectangle&size=small&radius=5)](https://www.linkedin.com/in/rodrigokamada)
+[![Twitter](https://shields.braskam.com/v1/shields?name=twitter&format=rectangle&size=small&radius=5&socialAccount=rodrigokamada)](https://twitter.com/rodrigokamada)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Prerequisites
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Before you start, you need to install and configure the tools:
 
-## Further help
+* [git](https://git-scm.com/)
+* [Node.js and npm](https://nodejs.org/)
+* [Angular CLI](https://angular.io/cli)
+* IDE (e.g. [Visual Studio Code](https://code.visualstudio.com/))
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Getting started
+
+
+### Create the Angular application
+
+
+**1.** Let's create the application with the Angular base structure using the `@angular/cli` with the route file and the SCSS style format.
+
+```powershell
+ng new angular-pwa --routing true --style scss
+CREATE angular-pwa/README.md (1056 bytes)
+CREATE angular-pwa/.editorconfig (274 bytes)
+CREATE angular-pwa/.gitignore (620 bytes)
+CREATE angular-pwa/angular.json (3237 bytes)
+CREATE angular-pwa/package.json (1075 bytes)
+CREATE angular-pwa/tsconfig.json (863 bytes)
+CREATE angular-pwa/.browserslistrc (600 bytes)
+CREATE angular-pwa/karma.conf.js (1428 bytes)
+CREATE angular-pwa/tsconfig.app.json (287 bytes)
+CREATE angular-pwa/tsconfig.spec.json (333 bytes)
+CREATE angular-pwa/.vscode/extensions.json (130 bytes)
+CREATE angular-pwa/.vscode/launch.json (474 bytes)
+CREATE angular-pwa/.vscode/tasks.json (938 bytes)
+CREATE angular-pwa/src/favicon.ico (948 bytes)
+CREATE angular-pwa/src/index.html (296 bytes)
+CREATE angular-pwa/src/main.ts (372 bytes)
+CREATE angular-pwa/src/polyfills.ts (2338 bytes)
+CREATE angular-pwa/src/styles.scss (80 bytes)
+CREATE angular-pwa/src/test.ts (745 bytes)
+CREATE angular-pwa/src/assets/.gitkeep (0 bytes)
+CREATE angular-pwa/src/environments/environment.prod.ts (51 bytes)
+CREATE angular-pwa/src/environments/environment.ts (658 bytes)
+CREATE angular-pwa/src/app/app-routing.module.ts (245 bytes)
+CREATE angular-pwa/src/app/app.module.ts (393 bytes)
+CREATE angular-pwa/src/app/app.component.scss (0 bytes)
+CREATE angular-pwa/src/app/app.component.html (23364 bytes)
+CREATE angular-pwa/src/app/app.component.spec.ts (1088 bytes)
+CREATE angular-pwa/src/app/app.component.ts (216 bytes)
+✔ Packages installed successfully.
+    Successfully initialized git.
+```
+
+
+
+## Cloning the application
+
+**1.** Clone the repository.
+
+```powershell
+git clone git@github.com:rodrigokamada/angular-validation.git
+```
+
+**2.** Install the dependencies.
+
+```powershell
+npm ci
+```
+
+**3.** Run the application.
+
+```powershell
+npm start
+```
