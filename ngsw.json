@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1640713717843,
+  "index": "https://rodrigokamada.github.io/angular-pwa/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://rodrigokamada.github.io/angular-pwa/favicon.ico",
+        "https://rodrigokamada.github.io/angular-pwa/index.html",
+        "https://rodrigokamada.github.io/angular-pwa/main.253911f4efc1c911.js",
+        "https://rodrigokamada.github.io/angular-pwa/manifest.webmanifest",
+        "https://rodrigokamada.github.io/angular-pwa/polyfills.42c540fd1bac3745.js",
+        "https://rodrigokamada.github.io/angular-pwa/runtime.8a70540abc3666e0.js",
+        "https://rodrigokamada.github.io/angular-pwa/scripts.abbb37f329463b12.js",
+        "https://rodrigokamada.github.io/angular-pwa/styles.b4a3fbbc62c6d968.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-128x128.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-144x144.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-152x152.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-192x192.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-384x384.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-512x512.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-72x72.png",
+        "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-96x96.png",
+        "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.7e8b70c0ca62bff8.woff2",
+        "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.e23375a1fdb9d81a.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.7e8b70c0ca62bff8.woff2": "00150349e6ebdaf2628af9ea4e56d6b02dbda393",
+    "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.e23375a1fdb9d81a.woff": "d644d61b4bc7925875ad953cc381b4a722b334d2",
+    "https://rodrigokamada.github.io/angular-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://rodrigokamada.github.io/angular-pwa/index.html": "c3f96906e2eb093b9d29f17dcfc8dd85d4d7e9b8",
+    "https://rodrigokamada.github.io/angular-pwa/main.253911f4efc1c911.js": "8f688a782c9476bb4cdf93ec989eb9a2faf80468",
+    "https://rodrigokamada.github.io/angular-pwa/manifest.webmanifest": "647db4fba4be264d65d1cbc9d3c6606d05610dcf",
+    "https://rodrigokamada.github.io/angular-pwa/polyfills.42c540fd1bac3745.js": "084933f557c69092701a8ad09eb7afac4bd58033",
+    "https://rodrigokamada.github.io/angular-pwa/runtime.8a70540abc3666e0.js": "2eb4511373cda909707d395ff5ca63e067141bd4",
+    "https://rodrigokamada.github.io/angular-pwa/scripts.abbb37f329463b12.js": "04debdd0f0ee90cf8e445d77cc33fae5cb59eee7",
+    "https://rodrigokamada.github.io/angular-pwa/styles.b4a3fbbc62c6d968.css": "693086ec3ccc8e24d61448660f3f1fd2e97e946c"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
