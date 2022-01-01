@@ -108,6 +108,88 @@ The files `ngsw-config.json`, `src/manifest.webmanifest` and icons were added an
 * `src/app/app.module.ts`: The service worker configuration was added.
 * `src/index.html`: Manifest file configuration and theme color was added.
 
+**4.** Remove the contents of the `AppComponent` class from the `src/app/app.component.ts` file. Create the `updateOnlineStatus` method to check the browser connection status as below.
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent implements OnInit {
+
+  isOnline: boolean;
+
+  constructor() {
+    this.isOnline = false;
+  }
+
+  public ngOnInit(): void {
+    this.updateOnlineStatus();
+
+    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
+    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+  }
+
+  private updateOnlineStatus(): void {
+    this.isOnline = window.navigator.onLine;
+  }
+
+}
+```
+
+**5.** Remove the contents of the `src/app/app.component.html` file. Add the HTML code as below to display the browser connection status as below.
+
+```html
+<div class="container-fluid py-3">
+  <h1>Angular Progressive Web Application (PWA)</h1>
+
+  <div class="row my-5">
+    <div class="col text-end">
+      Status:
+    </div>
+    <div class="col">
+      <span class="badge bg-success" *ngIf="isOnline">Online</span>
+      <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
+    </div>
+  </div>
+</div>
+```
+
+**6.** Run the application with the command below.
+
+```shell
+npm start
+
+> angular-pwa@1.0.0 start
+> ng serve
+
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.05 MB | 
+styles.css, styles.js | styles        | 486.85 kB | 
+polyfills.js          | polyfills     | 339.20 kB | 
+scripts.js            | scripts       |  76.33 kB | 
+main.js               | main          |  10.71 kB | 
+runtime.js            | runtime       |   6.86 kB | 
+
+                      | Initial Total |   2.95 MB
+
+Build at: 2022-01-01T17:33:35.241Z - Hash: 1e50e703667ef1c0 - Time: 3557ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✔ Compiled successfully.
+```
+
+**7.** Access the URL `http://localhost:4200/` and check if the application is working.
+
+![Angular Progressive Web Application (PWA) - Browser connection status](https://res.cloudinary.com/rodrigokamada/image/upload/v1641059024/Blog/angular-pwa/angular-pwa-step1.png)
+
 
 
 ## Cloning the application
