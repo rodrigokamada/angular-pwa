@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private swUpdate: SwUpdate) {
     this.isOnline = false;
-    this.modalVersion = true;
+    this.modalVersion = false;
   }
 
   public ngOnInit(): void {
