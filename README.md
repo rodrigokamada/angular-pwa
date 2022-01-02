@@ -422,10 +422,26 @@ export class AppComponent implements OnInit {
 
 **15.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-pwa/) and [Stackblitz](https://stackblitz.com/edit/angular13-pwa).
 
-| Android | iOS |
+**15.1.** Android version
+
 | :---: | :---: |
-| ![Angular Progressive Web Application (PWA) - Android add application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png) | ![Angular Progressive Web Application (PWA) - Android install application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png) |
-|  |
+| ![Angular Progressive Web Application (PWA) - Android add application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png) | ![Angular Progressive Web Application (PWA) - Android confirm add application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png) |
+| Modal to add to home screen | Confirmation to add to home screen |
+
+**15.2.** iOS version
+
+<table style="width:100%;border-width:0">
+	<tbody>
+		<tr>
+			<td style="text-align:center"><img alt="Angular Progressive Web Application (PWA) - Android add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png" /></td>
+			<td style="text-align:center"><img alt="Angular Progressive Web Application (PWA) - Android confirm add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png" /></td>
+		</tr>
+		<tr>
+			<td style="text-align:center">Modal to add to home screen</td>
+			<td style="text-align:center">Confirmation to add to home screen</td>
+		</tr>
+	</tbody>
+</table>
 
 
 
