@@ -276,6 +276,157 @@ export class AppComponent implements OnInit {
 
 ![Angular Progressive Web Application (PWA) - Available update](https://res.cloudinary.com/rodrigokamada/image/upload/v1641149762/Blog/angular-pwa/angular-pwa-step2.png)
 
+**11.** Install the `@angular/cdk` library.
+
+```powershell
+npm install @angular/cdk
+```
+
+**12.** Change the contents of the `AppComponent` class from the `src/app/app.component.ts` file. Import the `Platform` service and create the `loadModalPwa`, `addToHomeScreen` and `closePwa` methods to check the operational system and the browser and display how to add the application as below.
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { Platform } from '@angular/cdk/platform';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { filter, map } from 'rxjs/operators';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent implements OnInit {
+
+  isOnline: boolean;
+  modalVersion: boolean;
+  modalPwaEvent: any;
+  modalPwaPlatform: string|undefined;
+
+  constructor(private platform: Platform,
+              private swUpdate: SwUpdate) {
+    this.isOnline = false;
+    this.modalVersion = false;
+  }
+
+  public ngOnInit(): void {
+    this.updateOnlineStatus();
+
+    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
+    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.versionUpdates.pipe(
+        filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
+        map((evt: any) => {
+          console.info(`currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`);
+          this.modalVersion = true;
+        }),
+      );
+    }
+
+    this.loadModalPwa();
+  }
+
+  private updateOnlineStatus(): void {
+    this.isOnline = window.navigator.onLine;
+    console.info(`isOnline=[${this.isOnline}]`);
+  }
+
+  public updateVersion(): void {
+    this.modalVersion = false;
+    window.location.reload();
+  }
+
+  public closeVersion(): void {
+    this.modalVersion = false;
+  }
+
+  private loadModalPwa(): void {
+    if (this.platform.ANDROID) {
+      window.addEventListener('beforeinstallprompt', (event: any) => {
+        event.preventDefault();
+        this.modalPwaEvent = event;
+        this.modalPwaPlatform = 'ANDROID';
+      });
+    }
+
+    if (this.platform.IOS && this.platform.SAFARI) {
+      const isInStandaloneMode = ('standalone' in window.navigator) && ((<any>window.navigator)['standalone']);
+      if (!isInStandaloneMode) {
+        this.modalPwaPlatform = 'IOS';
+      }
+    }
+  }
+
+  public addToHomeScreen(): void {
+    this.modalPwaEvent.prompt();
+    this.modalPwaPlatform = undefined;
+  }
+
+  public closePwa(): void {
+    this.modalPwaPlatform = undefined;
+  }
+
+}
+```
+
+**13.** Change the contents of the `src/app/app.component.html` file. Add the HTML code to display how to add the application as below.
+
+```html
+<div class="container-fluid py-3">
+  <h1>Angular Progressive Web Application (PWA)</h1>
+
+  <div class="row my-5">
+    <div class="col text-end">
+      Status:
+    </div>
+    <div class="col">
+      <span class="badge bg-success" *ngIf="isOnline">Online</span>
+      <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
+    </div>
+  </div>
+</div>
+
+<div class="w-100 position-absolute top-0" *ngIf="modalVersion">
+  <div class="alert alert-secondary m-2">
+    <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close" (click)="closeVersion()"></button>
+    A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
+  </div>
+</div>
+
+<div class="w-100 position-absolute bottom-0" *ngIf="modalPwaPlatform === 'ANDROID' || modalPwaPlatform === 'IOS'">
+  <div class="alert alert-secondary m-2">
+    <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close" (click)="closePwa()"></button>
+    <!-- Android -->
+    <div *ngIf="modalPwaPlatform === 'ANDROID'" (click)="addToHomeScreen()">
+      Add this WEB app to home screen
+    </div>
+    <!-- iOS with Safari -->
+    <div *ngIf="modalPwaPlatform === 'IOS'">
+      To install this WEB app on your device, tap the "Menu" button
+      <img src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641089482/Blog/angular-pwa/safari_action_button_38x50.png" class="ios-menu m-0" />
+      and then "Add to home screen" button
+      <i class="bi bi-plus-square"></i>
+    </div>
+  </div>
+</div>
+```
+
+**14.** Add the style in the `src/app/app.component.scss` file as below.
+
+```css
+.ios-menu {
+  width: 14px;
+}
+```
+
+**15.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-pwa/) and [Stackblitz](https://stackblitz.com/edit/angular13-pwa).
+
+| Android | iOS |
+| :---: | :---: |
+| ![Angular Progressive Web Application (PWA) - Android add application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png) | ![Angular Progressive Web Application (PWA) - Android install application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png) |
+|  |
+
 
 
 ## Cloning the application
