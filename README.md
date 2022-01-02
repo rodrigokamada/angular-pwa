@@ -424,23 +424,17 @@ export class AppComponent implements OnInit {
 
 **15.1.** Android version
 
-| :---: | :---: |
-| ![Angular Progressive Web Application (PWA) - Android add application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png) | ![Angular Progressive Web Application (PWA) - Android confirm add application](https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png) |
-| Modal to add to home screen | Confirmation to add to home screen |
-
-**15.2.** iOS version
-
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
-	<tbody>
-		<tr>
-			<td style="text-align:center"><img alt="Angular Progressive Web Application (PWA) - Android add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png" /></td>
-			<td style="text-align:center"><img alt="Angular Progressive Web Application (PWA) - Android confirm add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png" /></td>
-		</tr>
-		<tr>
-			<td align="center">Modal to add to home screen</td>
-			<td align="center">Confirmation to add to home screen</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td align="center"><img alt="Angular Progressive Web Application (PWA) - Android add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step3-android.png" /></td>
+      <td align="center"><img alt="Angular Progressive Web Application (PWA) - Android confirm add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641151985/Blog/angular-pwa/angular-pwa-step4-android.png" /></td>
+    </tr>
+    <tr>
+      <td align="center"><em>Modal to add to home screen</em></td>
+      <td align="center"><em>Confirmation to add to home screen</em></td>
+    </tr>
+  </tbody>
 </table>
 
 
