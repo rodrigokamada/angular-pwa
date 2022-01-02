@@ -135,6 +135,7 @@ export class AppComponent implements OnInit {
 
   private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
+    console.info(`isOnline=[${this.isOnline}]`);
   }
 
 }
@@ -222,7 +223,7 @@ export class AppComponent implements OnInit {
       this.swUpdate.versionUpdates.pipe(
         filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
         map((evt: any) => {
-          console.info(`currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`)
+          console.info(`currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`);
           this.modalVersion = true;
         }),
       );
@@ -231,6 +232,7 @@ export class AppComponent implements OnInit {
 
   private updateOnlineStatus(): void {
     this.isOnline = window.navigator.onLine;
+    console.info(`isOnline=[${this.isOnline}]`);
   }
 
   public updateVersion(): void {
@@ -262,15 +264,17 @@ export class AppComponent implements OnInit {
   </div>
 </div>
 
-<div class="alert alert-secondary position-absolute top-0 m-2" *ngIf="modalVersion">
-  A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
-  <button type="button" class="btn-close position-absolute top-0 end-0" aria-label="Close" (click)="closeVersion()"></button>
+<div class="w-100 position-absolute top-0" *ngIf="modalVersion">
+  <div class="alert alert-secondary m-2">
+    <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close" (click)="closeVersion()"></button>
+    A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
+  </div>
 </div>
 ```
 
 **10.** Access the URL `http://localhost:4200/` and check if the application is working.
 
-![Angular Progressive Web Application (PWA) - Available update](https://res.cloudinary.com/rodrigokamada/image/upload/v1641074870/Blog/angular-pwa/angular-pwa-step2.png)
+![Angular Progressive Web Application (PWA) - Available update](https://res.cloudinary.com/rodrigokamada/image/upload/v1641149762/Blog/angular-pwa/angular-pwa-step2.png)
 
 
 
