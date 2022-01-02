@@ -76,4 +76,8 @@ export class AppComponent implements OnInit {
     this.modalPwaPlatform = undefined;
   }
 
+  public closePwa(): void {
+    this.modalPwaPlatform = undefined;
+  }
+
 }

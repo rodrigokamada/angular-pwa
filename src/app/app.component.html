@@ -21,7 +21,7 @@
 
 <div class="w-100 position-absolute bottom-0" *ngIf="modalPwaPlatform === 'ANDROID' || modalPwaPlatform === 'IOS'">
   <div class="alert alert-secondary m-2">
-    <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close" (click)="closeVersion()"></button>
+    <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close" (click)="closePwa()"></button>
     <!-- Android -->
     <div *ngIf="modalPwaPlatform === 'ANDROID'" (click)="addToHomeScreen()">
       Add this WEB app to home screen
