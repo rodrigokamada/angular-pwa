@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   constructor(private platform: Platform,
               private swUpdate: SwUpdate) {
     this.isOnline = false;
-    this.modalVersion = true;
+    this.modalVersion = false;
   }
 
   public ngOnInit(): void {
@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
       );
     }
 
-    //this.loadModalPwa();
+    this.loadModalPwa();
   }
 
   private updateOnlineStatus(): void {
