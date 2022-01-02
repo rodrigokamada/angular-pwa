@@ -140,7 +140,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-**5.** Remove the contents of the `src/app/app.component.html` file. Add the HTML code as below to display the browser connection status as below.
+**5.** Remove the contents of the `src/app/app.component.html` file. Add the HTML code to display the browser connection status as below.
 
 ```html
 <div class="container-fluid py-3">
@@ -188,7 +188,89 @@ Build at: 2022-01-01T17:33:35.241Z - Hash: 1e50e703667ef1c0 - Time: 3557ms
 
 **7.** Access the URL `http://localhost:4200/` and check if the application is working.
 
-![Angular Progressive Web Application (PWA) - Browser connection status](https://res.cloudinary.com/rodrigokamada/image/upload/v1641059024/Blog/angular-pwa/angular-pwa-step1.png)
+![Angular Progressive Web Application (PWA) - Browser connection status](https://res.cloudinary.com/rodrigokamada/image/upload/v1641086404/Blog/angular-pwa/angular-pwa-step1.png)
+
+**8.** Change the contents of the `AppComponent` class from the `src/app/app.component.ts` file. Import the `SwUpdate` service and create the `updateVersion` and `closeVersion` methods to check for available updates for the application as below.
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { filter, map } from 'rxjs/operators';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent implements OnInit {
+
+  isOnline: boolean;
+  modalVersion: boolean;
+
+  constructor(private swUpdate: SwUpdate) {
+    this.isOnline = false;
+    this.modalVersion = false;
+  }
+
+  public ngOnInit(): void {
+    this.updateOnlineStatus();
+
+    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
+    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
+
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.versionUpdates.pipe(
+        filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
+        map((evt: any) => {
+          console.info(`currentVersion=[${evt.currentVersion} | latestVersion=[${evt.latestVersion}]`)
+          this.modalVersion = true;
+        }),
+      );
+    }
+  }
+
+  private updateOnlineStatus(): void {
+    this.isOnline = window.navigator.onLine;
+  }
+
+  public updateVersion(): void {
+    this.modalVersion = false;
+    window.location.reload();
+  }
+
+  public closeVersion(): void {
+    this.modalVersion = false;
+  }
+
+}
+```
+
+**9.** Change the contents of the `src/app/app.component.html` file. Add the HTML code to display if there are updates available for the application as below.
+
+```html
+<div class="container-fluid py-3">
+  <h1>Angular Progressive Web Application (PWA)</h1>
+
+  <div class="row my-5">
+    <div class="col text-end">
+      Status:
+    </div>
+    <div class="col">
+      <span class="badge bg-success" *ngIf="isOnline">Online</span>
+      <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
+    </div>
+  </div>
+</div>
+
+<div class="alert alert-secondary position-absolute top-0 m-2" *ngIf="modalVersion">
+  A new version of this app is available. <a href="" (click)="updateVersion()">Update now</a>
+  <button type="button" class="btn-close position-absolute top-0 end-0" aria-label="Close" (click)="closeVersion()"></button>
+</div>
+```
+
+**10.** Access the URL `http://localhost:4200/` and check if the application is working.
+
+![Angular Progressive Web Application (PWA) - Available update](https://res.cloudinary.com/rodrigokamada/image/upload/v1641074870/Blog/angular-pwa/angular-pwa-step2.png)
 
 
 
