@@ -437,6 +437,21 @@ export class AppComponent implements OnInit {
   </tbody>
 </table>
 
+**15.2.** iOS version
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="center"><img alt="Angular Progressive Web Application (PWA) - iOS add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641211584/Blog/angular-pwa/angular-pwa-step3-ios.png" /></td>
+      <td align="center"><img alt="Angular Progressive Web Application (PWA) - iOS menu add application" src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641211584/Blog/angular-pwa/angular-pwa-step4-ios.png" /></td>
+    </tr>
+    <tr>
+      <td align="center"><em>Modal to add to home screen</em></td>
+      <td align="center"><em>Menu to add to home screen</em></td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ## Cloning the application
