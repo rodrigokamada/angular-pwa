@@ -422,7 +422,7 @@ export class AppComponent implements OnInit {
 
 **15.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-pwa/) and [Stackblitz](https://stackblitz.com/edit/angular13-pwa).
 
-**15.1.** Android version
+**15.1.** Android version.
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tbody>
@@ -437,7 +437,7 @@ export class AppComponent implements OnInit {
   </tbody>
 </table>
 
-**15.2.** iOS version
+**15.2.** iOS version.
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tbody>
