@@ -161,7 +161,7 @@ export class AppComponent implements OnInit {
 
 **6.** Run the application with the command below.
 
-```shell
+```powershell
 npm start
 
 > angular-pwa@1.0.0 start
