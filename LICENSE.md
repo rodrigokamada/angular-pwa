@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Rodrigo Kamada
+Copyright (c) 2022 Rodrigo Kamada
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
