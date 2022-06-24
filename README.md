@@ -1,7 +1,7 @@
 # Angular Progressive Web Application (PWA)
 
 
-Application example built with [Angular](https://angular.io/) 13 and adding the Progressive Web Application (PWA) using the [@angular/pwa library](https://www.npmjs.com/package/@angular/pwa).
+Application example built with [Angular](https://angular.io/) 14 and adding the Progressive Web Application (PWA) using the [@angular/pwa library](https://www.npmjs.com/package/@angular/pwa).
 
 This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/adicionando-o-aplicativo-web-progressivo-pwa-em-uma-aplicacao-angular) in portuguese and on the [DEV Community](https://dev.to/rodrigokamada/adding-the-progressive-web-application-pwa-to-an-angular-application-4g1e) in english.
 
@@ -420,7 +420,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-**15.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-pwa/) and [Stackblitz](https://stackblitz.com/edit/angular13-pwa).
+**15.** Ready! Access the URL `http://localhost:4200/` and check if the application is working. See the application working on [GitHub Pages](https://rodrigokamada.github.io/angular-pwa/) and [Stackblitz](https://stackblitz.com/edit/angular14-pwa).
 
 **15.1.** Android version.
 
