@@ -1,7 +1,7 @@
 {
   "name": "angular-pwa",
   "version": "1.0.0",
-  "description": "Application example built with Angular 13 and adding the Progressive Web Application (PWA) using the @angular/pwa library.",
+  "description": "Application example built with Angular 14 and adding the Progressive Web Application (PWA) using the @angular/pwa library.",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
   "private": true,
