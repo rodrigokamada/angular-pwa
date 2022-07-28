@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1656758360184,
+  "timestamp": 1659027027297,
   "index": "https://rodrigokamada.github.io/angular-pwa/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "https://rodrigokamada.github.io/angular-pwa/favicon.ico",
         "https://rodrigokamada.github.io/angular-pwa/index.html",
-        "https://rodrigokamada.github.io/angular-pwa/main.52dc6493d47ccd0d.js",
+        "https://rodrigokamada.github.io/angular-pwa/main.3d2031a54d5ad35b.js",
         "https://rodrigokamada.github.io/angular-pwa/manifest.webmanifest",
         "https://rodrigokamada.github.io/angular-pwa/polyfills.450c9b2831176457.js",
         "https://rodrigokamada.github.io/angular-pwa/runtime.64a4c478f89723db.js",
-        "https://rodrigokamada.github.io/angular-pwa/scripts.abbb37f329463b12.js",
-        "https://rodrigokamada.github.io/angular-pwa/styles.57e0fa67e8237506.css"
+        "https://rodrigokamada.github.io/angular-pwa/scripts.a5df712912c65b3f.js",
+        "https://rodrigokamada.github.io/angular-pwa/styles.0451fc1e5708852b.css"
       ],
       "patterns": []
     },
@@ -38,8 +38,8 @@
         "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-512x512.png",
         "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-72x72.png",
         "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-96x96.png",
-        "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.04b74c9ca959c717.woff",
-        "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.cafbf7170f1f1b17.woff2"
+        "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.6fdf98f9eb97d9e7.woff2",
+        "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.dba5e3b77b478961.woff"
       ],
       "patterns": []
     }
@@ -54,16 +54,16 @@
     "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://rodrigokamada.github.io/angular-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.04b74c9ca959c717.woff": "d5868949a21b702b784cd43437cf00f35d514e12",
-    "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.cafbf7170f1f1b17.woff2": "729751b69abdc0dbdd1df847dcaa04fff512d49a",
+    "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.6fdf98f9eb97d9e7.woff2": "3a284b0618771f29da8eb6be900e99439253dce0",
+    "https://rodrigokamada.github.io/angular-pwa/bootstrap-icons.dba5e3b77b478961.woff": "a77e6a2f335f3fcb4f2930794907c88ed7de7ca1",
     "https://rodrigokamada.github.io/angular-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://rodrigokamada.github.io/angular-pwa/index.html": "58992f5bf0d7d0cbc970571c368def7f9e9c0ca0",
-    "https://rodrigokamada.github.io/angular-pwa/main.52dc6493d47ccd0d.js": "7f69f529c19e97eb9d3aee63e1397c411d8a33a6",
+    "https://rodrigokamada.github.io/angular-pwa/index.html": "ea4d3971b07139f40d859ca5b273871eda420ec5",
+    "https://rodrigokamada.github.io/angular-pwa/main.3d2031a54d5ad35b.js": "c023832e2c54924262fca2d0092b78bd43683c88",
     "https://rodrigokamada.github.io/angular-pwa/manifest.webmanifest": "8e8f09336d1a60b5b2a4e09b5a376e4c4d21b0ea",
     "https://rodrigokamada.github.io/angular-pwa/polyfills.450c9b2831176457.js": "7c3ac593c7c18e883209c040210bf630fe6531b9",
     "https://rodrigokamada.github.io/angular-pwa/runtime.64a4c478f89723db.js": "49fa9038357f3db0130e1219265c8b5582c37349",
-    "https://rodrigokamada.github.io/angular-pwa/scripts.abbb37f329463b12.js": "f071c80334dd74cc1a8b8d6044d58933cf76d0af",
-    "https://rodrigokamada.github.io/angular-pwa/styles.57e0fa67e8237506.css": "a0ece436a6e953a4bcc3b0b83621230ee391c6a8"
+    "https://rodrigokamada.github.io/angular-pwa/scripts.a5df712912c65b3f.js": "4e3dca74f78d4172e2f70f577e325019ba1b1898",
+    "https://rodrigokamada.github.io/angular-pwa/styles.0451fc1e5708852b.css": "d9d01f02bc3f2d71e8eaa4845d2afd3864367fcd"
   },
   "navigationUrls": [
     {
