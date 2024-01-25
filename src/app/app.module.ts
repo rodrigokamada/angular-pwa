@@ -8,11 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RandomImageComponent } from './components/random-image/random-image.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyConverterComponent } from './components/currency-converter/currency-converter.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     RandomImageComponent,
+    CurrencyConverterComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    ReactiveFormsModule
   ],
   providers: [
   ],

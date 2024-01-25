@@ -20,9 +20,11 @@ export interface Size {
 })
 export class RandomImageService {
 
+  private apiRandomImageURL = '/api-random-image';
+
   apiUrl: string = 'https://random.imagecdn.app/v1/image';
-  width: string = '500';
-  height: string = '150';
+  width: string = '516';
+  height: string = '350';
   category: string = 'buildings';
   format: string = 'json';
 

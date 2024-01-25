@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row card custom-card">
+        <div class="card-body">
+            <form [formGroup]="currencyConverterForm" (ngSubmit)="convert()">
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount:</label>
+                    <input type="number" id="amount" class="form-control" formControlName="amountToBeConverted">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="fromCurrency" class="form-label">From Currency:</label>
+                    <select id="fromCurrency" class="form-select" formControlName="fromCurrency">
+                    <option value="" disabled selected>Select Currency</option>
+                    <option *ngFor="let currencies of actualCurrencies" [value]="currencies.code">
+                        {{ currencies.code }} - {{ currencies.currency }} &nbsp; ({{ currencies.mid }})
+                    </option>
+                    </select>
+                </div>
+
+                <div *ngIf="selectedMid">
+                    Selected Mid: {{ selectedMid }}
+                </div>
+    
+                <div class="mb-3">
+                    <label for="toCurrency" class="form-label">To Currency:</label>
+                    <select id="toCurrency" class="form-select" formControlName="toCurrency">
+                    <option value="" disabled selected>Select Currency</option>
+                    <option *ngFor="let currencies of actualCurrencies" [value]="currencies.code">
+                        {{ currencies.code }} - {{ currencies.currency }} &nbsp; ({{ currencies.mid }})
+                    </option>
+                    </select>
+                </div>
+
+                {{ result }}
+    
+                <button class="btn btn-primary btn-block width100" type="submit">Convert</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

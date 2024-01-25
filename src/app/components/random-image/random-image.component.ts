@@ -25,7 +25,7 @@ export class RandomImageComponent implements OnInit {
     });
   }
 
-  changeImage() {
+  changeImage(): void {
     setInterval( () => this.getRandomImage(), 30000);
   }
 
