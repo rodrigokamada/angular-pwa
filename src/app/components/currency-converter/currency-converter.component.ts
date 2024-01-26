@@ -47,15 +47,18 @@ export class CurrencyConverterComponent implements OnInit {
   }
 
   convert(): void {
+    this.currencyConverterForm.markAllAsTouched();
+    
     const amountToBeConverted = this.currencyConverterForm.get('amountToBeConverted')?.value;
     const baseCurrency = this.currencyConverterForm.get('fromCurrency')?.value;
     const targetCurrency = this.currencyConverterForm.get('toCurrency')?.value;
-
+    
     const baseCurrencyRate = this.actualCurrencies.find(currency => currency.code === baseCurrency)?.mid;
     const targetCurrencyRate = this.actualCurrencies.find(currency => currency.code === targetCurrency)?.mid;
-
+    
     baseCurrencyRate && targetCurrencyRate ? this.result = (amountToBeConverted * baseCurrencyRate) / targetCurrencyRate : console.log("Something went wrong..") 
-
+    
+    this.currencyConverterForm.valid ? SubmitEvent : '';
   }
 
 }

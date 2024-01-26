@@ -1,11 +1,33 @@
-@media screen and (max-width: 921px) { }
+@media screen and (max-width: 921px) {
+    .form-container {
+
+        div {
+            padding: 8px;
+        }
+    }
+ }
 
 @media (min-width: 922px) and (max-width: 1919px) {
-    
+
+    .form-container {
+        width: 100%;
+        display: flex; 
+    }
+
 }
 
 .custom-card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    margin-bottom: 1px;
+}
+
+.error-container {
+    color: red;
+    font-size: 14px;
+    font-style: italic;
 }
 
 .width100 {
