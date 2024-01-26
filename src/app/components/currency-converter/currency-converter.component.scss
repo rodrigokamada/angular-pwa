@@ -4,16 +4,59 @@
         div {
             padding: 8px;
         }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+        
+            button {
+                width: 30%;
+                
+                i {
+                    margin-left: 16px;
+                }
+            }
+        }
     }
  }
 
 @media (min-width: 922px) and (max-width: 1919px) {
-
     .form-container {
         width: 100%;
-        display: flex; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
     }
 
+    .amount-container, 
+    .from-currency-container, 
+    .to-currency-container {
+        flex: 1 1 25%;
+
+    } 
+
+    .button-container {
+        flex: 1 1 10%;
+    }
+
+    .result-container {
+        flex: 1 1 100%;
+    }
+
+    .container {
+        width: 1294px;
+    }
+}
+
+.form-container {
+
+    div {
+        padding: 8px;
+    }
+    .button-container {
+        padding-top: 33px;
+    }
 }
 
 .custom-card {
@@ -32,4 +75,18 @@
 
 .width100 {
     width: 100%;
+}
+
+.button-container {
+    // display: flex;
+    // justify-content: flex-end;
+
+    button {
+        display: flex;
+        justify-content: space-around;
+
+        i {
+            margin-left: 16px;
+        }
+    }
 }

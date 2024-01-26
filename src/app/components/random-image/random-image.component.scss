@@ -1,0 +1,45 @@
+@media screen and (max-width: 921px) {
+
+    .random-image { 
+        
+        height: 200px;
+        padding: 0;
+
+        .row { 
+
+            img {
+                width: 100%;
+                padding: 0;
+                border-radius: 15px 15px 0 0;
+            } 
+        }
+    }
+
+    .container {
+        padding: 12px;
+        // margin-top: 16px;
+        // display: flex;
+        // justify-content: center;
+    }
+}
+
+@media (min-width: 922px) and (max-width: 1919px) {
+
+    .random-image {
+        width: 1294px;
+        height: 360px;
+        overflow: hidden;
+        margin-bottom: -12px;
+
+        .row {
+
+            img {
+                padding: 0;
+                width: 100vw;
+                height: auto;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+    }
+
+}

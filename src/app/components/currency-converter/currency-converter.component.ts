@@ -19,6 +19,7 @@ export class CurrencyConverterComponent implements OnInit {
   currencyConverterForm: FormGroup;
   selectedMid: number | undefined;
   result: number | undefined;
+  isSubmitted: boolean = false;
 
   constructor(
     private currencyConverterService: CurrencyConverterService,
@@ -56,9 +57,12 @@ export class CurrencyConverterComponent implements OnInit {
     const baseCurrencyRate = this.actualCurrencies.find(currency => currency.code === baseCurrency)?.mid;
     const targetCurrencyRate = this.actualCurrencies.find(currency => currency.code === targetCurrency)?.mid;
     
-    baseCurrencyRate && targetCurrencyRate ? this.result = (amountToBeConverted * baseCurrencyRate) / targetCurrencyRate : console.log("Something went wrong..") 
-    
-    this.currencyConverterForm.valid ? SubmitEvent : '';
+    baseCurrencyRate && targetCurrencyRate ? this.result = (amountToBeConverted * baseCurrencyRate) / targetCurrencyRate : console.log("Something went wrong.."); 
+
+    if (this.currencyConverterForm.valid) {
+      SubmitEvent;
+      this.isSubmitted = true;
+    }
   }
 
 }

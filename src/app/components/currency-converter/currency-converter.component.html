@@ -32,13 +32,13 @@
                     <div *ngIf="currencyConverterForm.get('toCurrency')?.invalid && currencyConverterForm.get('toCurrency')?.touched; then currencyError"></div>
                 </div>
 
-                <div class="result-container" *ngIf="currencyConverterForm.valid">
-                    {{ result }}
-                </div>
-
                 <div class="button-container">
-                    <button class="btn btn-primary btn-block width100" type="submit">Convert</button>
-                </div> 
+                    <button class="btn btn-primary btn-block width100" type="submit">Convert<i class="bi bi-arrow-left-right"></i></button>
+                </div>
+                
+                <div class="result-container" *ngIf="isSubmitted">
+                    {{ result }} {{ currencyConverterForm.get('toCurrency')?.value }}
+                </div>
             </form>
         </div>
     </div>
