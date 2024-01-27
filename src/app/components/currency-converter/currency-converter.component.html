@@ -15,7 +15,7 @@
                     <select id="fromCurrency" class="form-select" formControlName="fromCurrency">
                     <option value="" disabled selected>Select currency</option>
                     <option *ngFor="let currencies of actualCurrencies" [value]="currencies.code">
-                        {{ currencies.code }} - {{ currencies.currency }} &nbsp; ({{ currencies.mid }})
+                        {{ currencies.code }} - {{ currencies.currency }}
                     </option>
                     </select>
                     <div *ngIf="currencyConverterForm.get('fromCurrency')?.invalid && currencyConverterForm.get('fromCurrency')?.touched; then currencyError"></div>
@@ -37,7 +37,13 @@
                 </div>
                 
                 <div class="result-container" *ngIf="isSubmitted">
-                    {{ result }} {{ currencyConverterForm.get('toCurrency')?.value }}
+                    <div class="result-container-result text-secondary bg-light">
+                        {{ currencyConverterForm.get('amountToBeConverted')?.value }}
+                        {{ currencyConverterForm.get('fromCurrency')?.value }}
+                        = 
+                        {{ result }} 
+                        {{ currencyConverterForm.get('toCurrency')?.value }}
+                    </div>
                 </div>
             </form>
         </div>

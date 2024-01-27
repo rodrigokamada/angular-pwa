@@ -17,8 +17,13 @@
                 }
             }
         }
+        
+        .result-container-result {
+            font-size: 1.75rem;
+        }
     }
- }
+
+}
 
 @media (min-width: 922px) and (max-width: 1919px) {
     .form-container {
@@ -28,33 +33,37 @@
         justify-content: center;
         align-items: flex-start;
     }
-
+    
     .amount-container, 
     .from-currency-container, 
     .to-currency-container {
         flex: 1 1 25%;
-
+        
     } 
-
+    
     .button-container {
         flex: 1 1 10%;
     }
-
+    
     .result-container {
         flex: 1 1 100%;
     }
-
+    
     .container {
         width: 1294px;
+    }
+    
+    .result-container-result {
+        font-size: 3.5rem;
     }
 }
 
 .form-container {
-
+    
     div {
         padding: 8px;
     }
-    
+
     .button-container {
         padding-top: 33px;
     }
@@ -71,7 +80,7 @@
 .error-container {
     color: red;
     font-size: 14px;
-    font-style: italic;
+    font-weight: 200;
 }
 
 .width100 {
@@ -89,3 +98,10 @@
         }
     }
 }
+
+.result-container-result {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+
